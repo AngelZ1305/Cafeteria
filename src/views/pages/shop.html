@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="app-title"><a href="index.html">Paw & Tails</a></h1>
+        <nav aria-label="Main navigation panel">
+            <input type="checkbox" id="menu">
+            <label for="menu" aria-label="Open Menu">☰</label>
+            <ul class="horizontal-list">
+                <li><a href="peta.html">Peta</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="help.html">How you can help</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/facebook.png" class="social-media-icons" alt="Facebook">
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/instagram.png" class="social-media-icons" alt="Instagram">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/youtube.png" class="social-media-icons" alt="YouTube">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/twitter.png" class="social-media-icons" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                    <img src="/images/cart.png" alt="Shopping Cart" class="cart-icon" id="cart-icon">
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container-shop">
+        <article class="product-card" data-id="1">
+            <img id="product-image" src="/imagesShop/plushie.jpg" alt="Kong Plushie Image" />
+            <h3 class="product-name">Name: Kong Plushie</h3>
+            <h3 id="product-price">Price: $330.00</h3>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </article>
+        <article class="product-card" data-id="2">
+            <img id="product-image" src="/imagesShop/bone.jpg" alt="Kong Bone Image" />
+            <h3 class="product-name">Name: Kong Bone</h3>
+            <h3 id="product-price">Price: $380.00</h3>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </article>
+        <article class="product-card" data-id="3">
+            <img id="product-image" src="/imagesShop/porcupine.jpg" alt="Kyjen porcupine Image" />
+            <h3 class="product-name">Name: Kyjen porcupine</h3>
+            <h3 id="product-price">Price: $240.00</h3>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </article>
+    
+    </section>
+
+    </main>
+</body>
+<script src="/js/shop.js"></script>
+</html>

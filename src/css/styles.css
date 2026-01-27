@@ -1,0 +1,252 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+    @apply text-2xl text-[#FAFAF7] font-black mx-5 decoration-0
+}
+a:hover {
+  @apply text-[#8a7968] font-black
+}
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+button {
+  padding: 10px 20px;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+}
+button:hover {
+  color: #007BFF;
+}
+header {
+  height: 120px;
+  background-color: #593d3b;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  font-size: small;
+}
+
+h3 {
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 8px;
+  font-size: medium;
+}
+label, input {
+  display: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-top: 2.5rem;
+}
+p {
+  font-weight: bold;
+  font-size: small;
+}
+.favorite-btn {
+  @apply p-3 rounded-full bg-transparent
+}
+.favorite-btn img {
+    @apply w-8
+}
+
+.favorite-btn:hover {
+    @apply -translate-y-1
+}
+.adoption-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 8px;
+  padding-bottom: 3rem;
+}
+
+.adoption-container img {
+  border-radius: 8px;
+  height: 200px;
+}
+.coffee-icon {
+    @apply w-[64px]
+}
+.container-principal {
+  text-align: center;
+  font-weight: bold;
+}
+.container-cart h2 {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 2rem;
+}
+.container-cart button {
+  background-color: #007BFF;
+  border-radius: 8px;
+}
+.container-cart button:hover {
+  color: white;
+  background-color: #003b79;
+}
+.container-shop {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+.container-shop article, .container-cart article {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.container-shop img, .container-cart img {
+  border-radius: 8px;
+  height: 150px;
+}
+.container-1 {
+  background-image: url(../images/background-coffee.jpg);
+  background-size: repeat;
+  background-position: center;
+  color: #593d3b;
+  padding: 4rem;
+  border-radius: 8px;
+      @apply w-screen h-screen
+  
+}
+.container-2 {
+  margin-top: 1rem;
+}
+.container-2 button {
+  border: 2px solid black;
+  border-radius: 8px;
+
+  @apply bg-gradient-to-r
+         from-[#6f5e53]
+         to-[#593d3b]
+         text-[#f5f5f5]
+         transition-all
+         duration-200;
+}
+
+.container-2 button:hover {
+  @apply bg-gradient-to-r from-[#593d3b] -translate-y-1
+}
+.container-2 a:hover {
+  color: #007BFF;
+}
+.container-coffees, .header-coffees, .container-desserts, .header-desserts {
+  @apply text-center font-bold flex items-center bg-[#6f5e53] border-4 border-black rounded-4xl gap-1.5 m-10 mb-4 p-4 justify-center 
+}
+.container-coffees article {
+    @apply border-4 rounded-lg mx-4
+}
+
+.horizontal-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.horizontal-list li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+}
+.information-container {
+    @apply bg-[#6f5e53] text-[#f5f5f5] border-4 border-[#292929] rounded-b-4xl rounded-tr-4xl h-1/4 
+}
+.information-container h2 {
+    @apply m-4 p-1 text-2xl
+}
+.products-img {
+    @apply w-50
+}
+.social-media-icons {
+  height: 50px;
+  width: 50px;
+}
+.social-media-icons:hover {
+  @apply -translate-y-1
+}
+
+#cart-icon {
+    @apply h-15 w-15 pointer-events-auto
+}
+#cart-icon:hover {
+  @apply -translate-y-1
+}
+#pets-container {
+  display: none;
+}
+@media screen and (max-width: 1080px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  input:checked~ul {
+    display: flex;
+  }
+  input:checked~label {
+    background: #593d3b;
+    color: white;
+    text-align: center;
+    margin-left: 6.5rem;
+  }
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+  }
+  ul {
+    display: none;
+  }
+  .container-dogs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .horizontal-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .horizontal-list li {
+    margin-bottom: 10px;
+  }
+}
