@@ -1,32 +1,30 @@
 @import "tailwindcss";
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply m-0 p-0 box-border
+
 }
+
 a {
-    @apply text-2xl text-[#FAFAF7] font-black mx-5 decoration-0
+  @apply text-2xl text-[#FAFAF7] font-black mx-5 decoration-0
 }
+
 a:hover {
   @apply text-[#8a7968] font-black
 }
+
 body {
-  min-height: 100vh;
   font-family: Arial, sans-serif;
+  @apply bg-[#ffdebd] min-h-[100vh]
 }
+
 button {
-  padding: 10px 20px;
-  font-size: medium;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  color: black;
   cursor: pointer;
-  background-color: transparent;
+  @apply px-2.5 py-5 font-bold border-0 rounded text-black bg-transparent
+  
 }
-button:hover {
-  color: #007BFF;
-}
+
+
 header {
   height: 120px;
   background-color: #593d3b;
@@ -37,37 +35,52 @@ header {
   font-size: small;
 }
 
-h3 {
-  margin: 5px 0;
-  background-color: white;
-  border-radius: 8px;
-  font-size: medium;
-}
-label, input {
-  display: none;
-}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 li {
   margin-top: 2.5rem;
 }
+
 p {
   font-weight: bold;
   font-size: small;
 }
+
 .favorite-btn {
   @apply p-3 rounded-full bg-transparent
 }
+
 .favorite-btn img {
-    @apply w-8
+  @apply w-8
 }
 
-.favorite-btn:hover {
-    @apply -translate-y-1
+.favorite-btn:hover  {
+  @apply -translate-y-1 
 }
+.heart-icon {
+  width: 28px;
+  height: 28px;
+  color: #cfcfcf;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.heart-icon:hover {
+  color: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.heart-icon.active {
+  color: #e63946;
+}
+
+
+
 .adoption-container {
   margin: 2rem;
   display: flex;
@@ -82,44 +95,20 @@ p {
   border-radius: 8px;
   height: 200px;
 }
+
 .coffee-icon {
-    @apply w-[64px]
+  @apply w-[64px]
 }
+
 .container-principal {
   text-align: center;
   font-weight: bold;
 }
-.container-cart h2 {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  margin: 2rem;
+.container-products {
+  @apply w-screen
 }
-.container-cart button {
-  background-color: #007BFF;
-  border-radius: 8px;
-}
-.container-cart button:hover {
-  color: white;
-  background-color: #003b79;
-}
-.container-shop {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  margin: 2rem;
-}
-.container-shop article, .container-cart article {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-}
-.container-shop img, .container-cart img {
-  border-radius: 8px;
-  height: 150px;
-}
+
+
 .container-1 {
   background-image: url(../images/background-coffee.jpg);
   background-size: repeat;
@@ -127,36 +116,40 @@ p {
   color: #593d3b;
   padding: 4rem;
   border-radius: 8px;
-      @apply w-screen h-screen
-  
+  @apply w-screen h-screen
 }
+
 .container-2 {
-  margin-top: 1rem;
+  @apply mt-4 flex items-center justify-center text-center w-screen
 }
+
 .container-2 button {
   border: 2px solid black;
   border-radius: 8px;
 
-  @apply bg-gradient-to-r
-         from-[#6f5e53]
-         to-[#593d3b]
-         text-[#f5f5f5]
-         transition-all
-         duration-200;
+  @apply bg-[radial-gradient(circle,#593d3b,#593d3b,#593d3b)]  text-[#f5f5f5] transition-all duration-200;
 }
 
 .container-2 button:hover {
-  @apply bg-gradient-to-r from-[#593d3b] -translate-y-1
+  @apply bg-[radial-gradient(circle,#6f5e53,#6f5e53,#593d3b,#593d3b)] -translate-y-1
 }
+
 .container-2 a:hover {
   color: #007BFF;
 }
-.container-coffees, .header-coffees, .container-desserts, .header-desserts {
-  @apply text-center font-bold flex items-center bg-[#6f5e53] border-4 border-black rounded-4xl gap-1.5 m-10 mb-4 p-4 justify-center 
+
+.container-menu {
+  @apply text-center text-3xl font-bold items-center bg-[#ffefe0] border-2 border-black rounded-xl gap-1.5 m-10 mx-50 mb-4 p-4 justify-center;
 }
-.container-coffees article {
-    @apply border-4 rounded-lg mx-4
+
+.container-coffees, .container-favorites {
+  @apply grid grid-cols-3 gap-6;
 }
+
+.coffee-card {
+  @apply text-center text-lg font-bold flex flex-col items-center gap-1.5 p-4 rounded-xl border h-full;
+}
+
 
 .horizontal-list {
   list-style-type: none;
@@ -164,6 +157,7 @@ p {
   display: flex;
   justify-content: space-around;
 }
+
 .horizontal-list li a {
   display: block;
   padding: 10px 20px;
@@ -171,47 +165,82 @@ p {
   font-size: medium;
   font-weight: bold;
 }
+
 .information-container {
-    @apply bg-[#6f5e53] text-[#f5f5f5] border-4 border-[#292929] rounded-b-4xl rounded-tr-4xl h-1/4 
+  @apply bg-[#6f5e53] text-[#f5f5f5] border-4 border-[#292929] rounded-b-4xl rounded-tr-4xl h-1/4
 }
+
 .information-container h2 {
-    @apply m-4 p-1 text-2xl
+  @apply m-4 p-1 text-2xl
 }
+.login {
+  @apply text-center font-bold items-center bg-[#ffefe0] border-2 border-black rounded-xl gap-1.5 m-50 mb-4 p-4 flex flex-col
+}
+.login button {
+  @apply border-2 rounded-2xl bg-[#593d3b] w-1/2
+}
+.login label {
+  @apply mr-5 w-full
+}
+.login input {
+  @apply border-2 rounded-2xl my-2 w-full
+}
+
+.login button:hover {
+  @apply text-white border-2 rounded-2xl
+}
+.login form {
+  @apply flex flex-col gap-4 mx-auto w-full max-w-sm
+}
+
+
 .products-img {
-    @apply w-50
+  @apply w-50
 }
+
 .social-media-icons {
   height: 50px;
   width: 50px;
 }
+
 .social-media-icons:hover {
   @apply -translate-y-1
 }
 
 #cart-icon {
-    @apply h-15 w-15 pointer-events-auto
+  @apply h-15 w-15 pointer-events-auto
 }
+
 #cart-icon:hover {
   @apply -translate-y-1
 }
+#menu, #menu-label {
+  display: none;
+}
+
+
 #pets-container {
   display: none;
 }
+
 @media screen and (max-width: 1080px) {
   header {
     flex-direction: column;
     height: auto;
     padding: 10px;
   }
+
   input:checked~ul {
     display: flex;
   }
+
   input:checked~label {
     background: #593d3b;
     color: white;
     text-align: center;
     margin-left: 6.5rem;
   }
+
   label {
     box-sizing: border-box;
     display: inline-block;
@@ -224,19 +253,19 @@ p {
     text-align: center;
     user-select: none;
   }
+
   li {
     display: block;
     margin: 0;
     padding: 10px;
     list-style: none;
   }
+
   ul {
     display: none;
   }
-  .container-coffees {
-    flex-direction: column;
-    align-items: center;
-  }
+
+
   .horizontal-list {
     list-style-type: none;
     padding: 0;
@@ -246,7 +275,45 @@ p {
     flex-direction: column;
     align-items: center;
   }
+
   .horizontal-list li {
     margin-bottom: 10px;
   }
+  .container-menu {
+  @apply text-lg font-bold bg-[#ffefe0] border-2 border-black rounded-xl w-screen mx-0;
+}
+
+.container-coffees, .container-favorites {
+  @apply grid grid-cols-2;
+}
+
+.coffee-card {
+  @apply text-center text-lg font-bold flex flex-col items-center gap-1.5 p-4 rounded-xl border h-full;
+}
+.information-container {
+  @apply w-full h-50
+}
+.login {
+  @apply text-center text-sm font-bold items-center bg-[#ffefe0] border-2 border-black rounded-xl gap-1.5 m-4 p-4 flex flex-col
+}
+.login button {
+  @apply border rounded-2xl bg-[#593d3b] w-full
+}
+.login label {
+  @apply mr-5 w-full
+}
+.login input {
+  @apply border-2 rounded-2xl my-2 w-full
+}
+
+.login button:hover {
+  @apply text-white border-4 rounded-2xl
+}
+.login form {
+  @apply flex flex-col gap-4 mx-auto w-full max-w-sm
+}
+
+#menu-label {
+  display: block;
+}
 }
