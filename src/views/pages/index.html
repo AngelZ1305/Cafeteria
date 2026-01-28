@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería</title>
-<link rel="stylesheet" href="../../css/output.css">
+    <link rel="stylesheet" href="../../css/output.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h1 id="app-title"><a href="index.html">Café</a></h1>
         <nav aria-label="Main navigation panel">
             <input type="checkbox" id="menu">
-            <label for="menu" aria-label="Open Menu">☰</label>
+            <label for="menu" aria-label="Open Menu" id="menu-label">☰</label>
             <ul class="horizontal-list">
                 <li><a href="about.html">About us</a></li>
                 <li><a href="help.html">How you can help</a></li>
@@ -49,6 +49,10 @@
                         <img src="../../images/portavasos.png" alt="Cup Holder" class="cart-icon" id="cart-icon">
                     </a>
                 </li>
+                <li>
+                    <button id="logout-btn">Logout</button>
+
+                </li>
 
 
             </ul>
@@ -59,24 +63,21 @@
             <section class="container-1">
 
                 <div class="information-container">
-                <h2>More than coffee</h2>
-                <p>It's a place to slow down, connect, and enjoy the simple pleasure of a great cup of coffee.</p>
+                    <h2>More than coffee</h2>
+                    <p>It's a place to slow down, connect, and enjoy the simple pleasure of a great cup of coffee.</p>
                 </div>
 
-                <div class="container-2">
-                <nav aria-label="Products Categories">
-                    <button id="load-coffee-btn">Bebidas</button>
-                    <button id="load-desserts-btn">Postres</button>
-                </nav>
-                <div>
-                
-            </div>
-            </div>
-            <section id="products-container" class="container-products">
-                </section>
-            </section>
 
+            </section>
         </section>
+        </section>
+        <section class="container-2">
+            <nav aria-label="Products Categories">
+                <button id="load-coffee-btn">Coffees</button>
+                <button id="load-favorites-btn">Favorites</button>
+            </nav>
+        </section>
+        <section id="products-container" class="container-products">
     </main>
     <script src="../../js/scripts.js"></script>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería</title>
+    <link rel="stylesheet" href="../../css/output.css">
+
+</head>
+<body>
+    <main>
+  <section aria-labelledby="login-title" class="login">
+    <img src="../../images/cafe.png" alt="coffee_icon">
+    <h1 id="login-title">Sign in</h1>
+
+    <form action="/login" method="post" id="login">
+      <fieldset>
+        <legend class="sr-only">Login credentials</legend>
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          autocomplete="current-password"
+        />
+        <button type="submit">Sign in</button>
+      </fieldset>
+    </form>
+    <p id="loginMsg"></p>
+
+  </section>
+</main>
+
+</body>
+<script src="../../js/users.js"></script>
+<script src="../../js/login.js"></script>
+</html>
