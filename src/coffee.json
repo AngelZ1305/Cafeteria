@@ -3,54 +3,54 @@
     "id": 1,
     "nombre": "Vainilla Latte",
     "precio": 3.50,
-    "imagen": "src/imagesCoffees/latte.png"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 2,
     "nombre": "Golden Cup Café",
     "precio": 3.75,
-    "imagen": "images/golden-cup.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 3,
     "nombre": "Roast & Ritual",
     "precio": 4.00,
-    "imagen": "images/roast-ritual.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 4,
     "nombre": "Midnight Grind",
     "precio": 3.90,
-    "imagen": "images/midnight-grind.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 5,
     "nombre": "Urban Sip",
     "precio": 3.25,
-    "imagen": "images/urban-sip.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 6,
     "nombre": "The Daily Bean",
     "precio": 3.60,
-    "imagen": "images/daily-bean.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 7,
     "nombre": "Cozy Corner Café",
     "precio": 3.80,
-    "imagen": "images/cozy-corner.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 8,
     "nombre": "Homebrew Coffee",
     "precio": 3.45,
-    "imagen": "images/homebrew.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   },
   {
     "id": 9,
     "nombre": "Warm Mug",
     "precio": 3.20,
-    "imagen": "images/warm-mug.jpg"
+    "imagen": "../../imagesCoffees/latte.png"
   }
 ]
