@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (result.ok) {
     window.location.href = "/Cafeteria/";
-      console.log("hola")
     }
   });
 });
