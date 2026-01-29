@@ -377,6 +377,9 @@ p {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
+.coffee-card:hover {
+  background-image: radial-gradient(circle,#eba611,#ffefe0,#ffefe0,#ffefe0);
+}
 .horizontal-list {
   list-style-type: none;
   padding: 0;

@@ -147,7 +147,10 @@ p {
 }
 
 .coffee-card {
-  @apply text-center text-lg font-bold flex flex-col items-center gap-1.5 p-4 rounded-xl border h-full;
+  @apply text-center text-lg font-bold flex flex-col items-center gap-1.5 p-4 rounded-xl border h-full ;
+}
+.coffee-card:hover {
+  @apply bg-[radial-gradient(circle,#eba611,#ffefe0,#ffefe0,#ffefe0)]
 }
 
 
