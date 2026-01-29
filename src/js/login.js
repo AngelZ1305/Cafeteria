@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     msg.textContent = result.message;
 
     if (result.ok) {
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
+      console.log("hola")
     }
   });
 });

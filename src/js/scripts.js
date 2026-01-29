@@ -17,7 +17,7 @@ if (type === 'coffee') {
 }
 
 if (loadCoffee && loadFavorites && productsContainer) {
-    fetch("../partials/coffees.html")
+    fetch("src/views/partials/coffees.html")
         .then(r => r.text())
         .then(async html => {
             productsContainer.innerHTML = html;
@@ -32,7 +32,7 @@ if (loadCoffee && loadFavorites && productsContainer) {
     loadCoffee.addEventListener("click", async () => {
         if (!coffeeContainer) {
             try {
-                const html = await fetch("../partials/coffees.html").then(r => r.text());
+                const html = await fetch("src/views/partials/coffees.html").then(r => r.text());
                 productsContainer.innerHTML = html;
                 productsContainer.style.display = "block";
 
@@ -57,7 +57,7 @@ if (loadCoffee && loadFavorites && productsContainer) {
     loadFavorites.addEventListener("click", async () => {
   if (!favoriteContainer) {
     try {
-      const html = await fetch("../partials/favorites.html").then(r => r.text());
+      const html = await fetch("src/views/partials/favorites.html").then(r => r.text());
       productsContainer.innerHTML = html;
       productsContainer.style.display = "block";
 
@@ -102,7 +102,7 @@ document.addEventListener("click", async (e) => {
 document.getElementById("logout-btn")?.addEventListener("click", logout);
 const userKey = getCurrentUserKey();
 if (!userKey) {
-  window.location.href = "login.html";
+  window.location.href = "src/views/pages/login.html";
 }
 
 
@@ -120,7 +120,7 @@ async function loadCoffees() {
     let coffees = JSON.parse(localStorage.getItem("coffees"));
 
     if (!coffees || coffees.length === 0) {
-        const res = await fetch("../../coffee.json");
+        const res = await fetch("src/coffee.json");
         if (!res.ok) throw new Error("No se pudo cargar coffee.json");
 
         coffees = await res.json();
@@ -226,7 +226,7 @@ function renderFavoriteCoffees(coffees) {
   const favoriteCoffees = coffees.filter(c => favIds.includes(String(c.id)));
 
   if (favoriteCoffees.length === 0) {
-    containerFavorites.innerHTML = "<p>No tienes cafés favoritos.</p>";
+    containerFavorites.innerHTML = "<p>You don't have any favorite yet.</p>";
     return;
   }
 
@@ -250,7 +250,7 @@ function logout() {
 
   alert("Sesión cerrada");
 
-  window.location.href = "login.html";
+  window.location.href = "src/views/pages/login.html";
 }
 
 loadCoffees().catch(console.error);
